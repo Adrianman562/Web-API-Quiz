@@ -1,0 +1,95 @@
+/* Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
+* {
+    font-family: 'Noto Sans', sans-serif;
+    color: red;
+}
+
+/* For sticky footer - used flexbox from https://css-tricks.com/couple-takes-sticky-footer/ */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    /* Background image CSS from https://web.dev/optimize-css-background-images-with-media-queries/*/
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /* css so footer is at bottom of viewport */
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content */
+
+main {
+    /* css so footer is at bottom of viewport */
+
+    flex: 1 0 auto;
+}
+
+/* Footer */
+
+footer {
+    /* css so footer is at bottom of viewport */
+
+    flex-shrink: 0;
+    font-size: .5rem;
+}
+
+/* hide sections until they are shown via the click events */
+
+#questions,
+#final,
+#highscores,
+#yaynay {
+    display: none;  
+  } 
+
+/* Remove bullet points from answers list */
+
+ul.nobullets {
+list-style-type: none;
+}
+
+/* Answer button styling */
+
+.ansBtn,
+.ansBtn:hover,
+.ansBtn:active,
+.ansBtn:focus,
+.ansBtn:active:focus {
+    box-shadow: none;
+    outline: none;
+    background-color: orange;
+}
+
+/* Media queries for background image from https://web.dev/optimize-css-background-images-with-media-queries/ */
+
+/* Mobile */
+
+@media (max-width: 480px) {
+    body {
+        background-color: rgb(200, 10, 225);
+    }
+}
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 1024px) {
+    body {
+        background-image: url(../assets/images/greg-rosenke-6QnEf_b47eA-unsplash.jpg);
+    }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+    body {
+	    background-image: url(../assets/images/greg-rosenke-6QnEf_b47eA-unsplash.jpg);
+   }
+}
